@@ -241,19 +241,14 @@ footer {
     color: white;
 }
 
-.social-icons {
-    display: flex;
-    gap: 1rem;
-}
-
-.social-icons a {
-    color: white;
-    font-size: 1.5rem;
+.footer-social a {
+    color: #9ca3af;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
-    color: var(--primary);
+.footer-social a:hover {
+    color: white;
 }
 
 .footer-bottom {
