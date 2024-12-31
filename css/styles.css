@@ -95,22 +95,28 @@ h1, h2, h3, h4 {
 /* Features Section */
 .features {
     padding: 5rem 0;
-    background: var(--background);
+    background: var(--accent);
+    margin-top: 4rem;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary);
 }
 
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
 }
 
 .feature-card {
-    padding: 2rem;
     background: white;
+    padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
@@ -121,7 +127,18 @@ h1, h2, h3, h4 {
 .feature-card i {
     font-size: 2.5rem;
     color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    color: var(--text);
     margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.feature-card p {
+    color: var(--text);
+    line-height: 1.6;
 }
 
 /* Buttons */
@@ -152,20 +169,47 @@ h1, h2, h3, h4 {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.app-image {
+    position: relative;
+    overflow: hidden;
 }
 
 .app-image img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.app-card:hover .app-image img {
+    transform: scale(1.05);
 }
 
 .app-content {
     padding: 1.5rem;
 }
 
+.app-content h3 {
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.app-content p {
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
 .app-links {
-    margin-top: 1rem;
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -296,6 +340,11 @@ footer {
 
     .feature-grid {
         grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    .apps-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
     }
     .showcase-grid {
         grid-template-columns: 1fr;
